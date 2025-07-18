@@ -83,6 +83,7 @@ public class UserInterface {
                  4. Add Chips
                  5. Apply Coupon
                  6. Checkout
+                 7. View Reviews
                  0. Cancel the Order\s
                 Enter here:\s""";
 
@@ -110,6 +111,8 @@ public class UserInterface {
                 case 6:
                     checkOut();
                     return;
+                case 7:
+                    displayReviews();
                 default:
                     System.out.println("Are you sure you want to cancel the order?(You cannot undo this)");
                     int confirmation = console.promptForInt("Press 1 to confirm cancellation: ");
@@ -1541,6 +1544,7 @@ public class UserInterface {
 //            //Out prints the total price
 
             System.out.println(order.toString());
+
 //           System.out.printf(ColorCodes.BOLD + "\n The total price is %.2f\n" + ColorCodes.RESET + ColorCodes.FLORAL_WHITE , order.getTotal());
 
         }
@@ -1571,6 +1575,7 @@ public class UserInterface {
                     //If they cancel, they can choose to add more to the order.
                     checkingOut = false;
                     System.out.println("\n" + ColorCodes.BOLD + "Cancelling" + ColorCodes.RESET + ColorCodes.FLORAL_WHITE + "\n");
+
                 }
 
             }
@@ -1579,7 +1584,7 @@ public class UserInterface {
 
     }
 
-    public void addReview()
+    private void addReview()
     {
         // Gets review
         boolean review = true;
@@ -1601,17 +1606,24 @@ public class UserInterface {
 
     }
 
-    public void displayReviews(){
+    private void displayReviews() {
 
-        try (BufferedReader reader = new BufferedReader(new FileReader("src/reviews"))) {
+        boolean viewReview = console.getBoolean("Do you want to view the reviews ");
 
-            String line;
-            while ((line = reader.readLine()) != null) {
-                System.out.println(line);
+        if (viewReview) {
+
+
+            try (BufferedReader reader = new BufferedReader(new FileReader("src/reviews"))) {
+
+                String line;
+                while ((line = reader.readLine()) != null) {
+                    System.out.println(line);
+                }
+            } catch (IOException e) {
+                System.out.println("Error reading file: " + e.getMessage());
             }
-        } catch (IOException e) {
-            System.out.println("Error reading file: " + e.getMessage());
         }
+
     }
 
     private String reviewStructure(String name, int rating, String feedback){
@@ -1673,6 +1685,8 @@ public class UserInterface {
         catch (IOException e){
             System.out.println("Error! File failed to read...");
         }
+
+        displayReviews();
 
     }
 

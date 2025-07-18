@@ -1,0 +1,13 @@
+--------------------------------------------
+DELI-DELI SANDWICH SHOP
+--------------------------------------------
+Cashier: DELI-DELI-MANAGER
+
+A size large Grape flavor drink: $3.00
+
+ORIGINAL TOTAL: $3.00
+
+Ordered by -> tony
+Thank you for buying at DELI-DELI SANDWICH SHOP
+
+TODAY'S DATE: 2025/07/18 - 12:30

@@ -11,10 +11,11 @@ public class Main {
 
 
         UserInterface UI = new UserInterface();
+        UI.init();
 
 
-        UI.addReview();
-        UI.displayReviews();
+
+
 
     }
 

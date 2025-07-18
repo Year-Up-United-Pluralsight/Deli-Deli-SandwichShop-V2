@@ -1,0 +1,15 @@
+--------------------------------------------
+DELI-DELI SANDWICH SHOP
+--------------------------------------------
+Cashier: DELI-DELI-MANAGER
+
+A size 8"  Wheat  with [Steak] [Provolone] [Peppers] [] Not Toasted: $10.50
+
+ORIGINAL TOTAL: $10.50
+Discounted Total: $9.45
+COUPON APPLIED: 10OFF
+
+Ordered by -> John
+Thank you for buying at DELI-DELI SANDWICH SHOP
+
+TODAY'S DATE: 2025/07/18 - 12:37
